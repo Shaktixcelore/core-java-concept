@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definition for Alerts -->
+    <bean id="misssedCallAlert" class="com.example.spring.learning.project.missedCallAlert"/>
+    <bean id="helloTuneAlert" class="com.example.spring.learning.project.helloTuneAlert"/>
+    <bean id = "dataServiceAlert" class = "com.example.spring.learning.project.dataServiceAlert"/>
+
+
+    <bean id="alert" class="com.example.spring.learning.project.Airtel">
+        <property name="service" ref="dataServiceAlert"/> 
+    </bean>
+
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definition for MathCheat -->
+    <bean id="mathCheatObjectValue" class="com.example.spring.learning.dependencyobject.MathCheat"/>
+
+    <!-- Bean definition for Student -->
+    <bean id="stu" class="com.example.spring.learning.dependencyobject.Student">
+        <property name="id" value="1001"/>
+        <property name="mathCheat" ref="mathCheatObjectValue"/>
+    </bean>
+
+    <!-- Bean definition for AnotherStudent -->
+    <bean id="anotherStudent" class="com.example.spring.learning.dependencyobject.AnotherStudent">
+        <property name="cheat" ref="mathCheatObjectValue"/>
+    </bean>
+
+</beans>

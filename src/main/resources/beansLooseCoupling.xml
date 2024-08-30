@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definition for ScienceCheat -->
+    <bean id="scienceCheatObjectValue" class="com.example.spring.learning.springloosecoupling.ScienceCheat"/>
+    <bean id="mathCheatObjectValue" class="com.example.spring.learning.springloosecoupling.MathCheat"/>
+
+
+    <!-- Bean definition for Student -->
+    <bean id="stu" class="com.example.spring.learning.springloosecoupling.Student">
+        <property name="cheat" ref="mathCheatObjectValue"/> 
+        <!-- <property name="cheat" ref="scienceCheatObjectValue"/>  jisko call krna ho usko ref me daal denge --> 
+    </bean>
+
+</beans>
